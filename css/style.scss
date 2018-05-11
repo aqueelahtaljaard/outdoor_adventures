@@ -1,1 +1,53 @@
 //my sass//
+body{
+  display: grid;
+  grid-template-areas:
+  "nav nav nav nav "
+  "article article article article"
+  "hike camp fish climb";
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows:  110px auto auto auto;
+  background-color: #63c98f;
+}
+
+@mixin greenNav{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  margin:0 auto;
+  position: sticky;
+  left: 0;
+  width: 97%;
+}
+
+// STYLE FOR NAV//
+nav{
+  grid-area: nav;
+  @include greenNav;
+
+
+    li{
+      text-decoration: none;
+      display: inline;
+      margin: 5%;
+    }
+
+    a{
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: white;
+    }
+
+    a:hover{
+      color: #217f6c;
+      text-decoration: underline;
+    }
+}
+
+//STYlE FOR LOGO//
+#logo{
+  float: right;
+  margin-top: -60px;
+  margin-left: 10p;
+  }

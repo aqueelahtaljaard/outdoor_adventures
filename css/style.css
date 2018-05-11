@@ -1,0 +1,34 @@
+body {
+  display: grid;
+  grid-template-areas: "nav nav nav nav " "article article article article" "hike camp fish climb";
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 110px auto auto auto;
+  background-color: #63c98f; }
+
+nav {
+  grid-area: nav;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  position: sticky;
+  left: 0;
+  width: 100%; }
+  nav li {
+    text-decoration: none;
+    display: inline;
+    margin: 5%; }
+  nav a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: white; }
+  nav a:hover {
+    color: #217f6c;
+    text-decoration: underline; }
+
+.logo {
+  margin-top: -60px;
+  margin-left: 250px; }
+
+/*# sourceMappingURL=style.css.map */
