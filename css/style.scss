@@ -1,25 +1,55 @@
 //my sass//
-body{
+#container{
   display: grid;
   grid-template-areas:
-  "nav nav nav nav "
+  "logo logo logo logo"
+  "nav nav nav nav"
   "article article article article"
-  "hike camp fish climb";
+  "camping camping camping camping"
+  "fishing fishing fishing fishing"
+  "hiking hiking hiking hiking"
+  "mountain_climbing mountain_climbing mountain_climbing mountain_climbing";
   grid-template-columns: auto auto auto auto;
-  grid-template-rows:  110px auto auto auto;
+  grid-template-rows:  200px auto auto auto;
   background-color: #63c98f;
+  font-size: 15px;
+}
+
+@mixin info{
+  font-family:sans-serif;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20px;
+
+  li{
+    text-decoration: none;
+  }
+
+  a{
+    transition-duration: 0.4s;
+    color: white;
+  }
+
+  a:hover{
+    color: #217f6c;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 
 @mixin greenNav{
   background-color: black;
   color: white;
   font-size: 20px;
-  padding: 20px;
   margin:0 auto;
   position: sticky;
-  left: 0;
-  width: 97%;
+  width: 100%;
+  text-align: center;
+  top: 0;
 }
+
+
 
 // STYLE FOR NAV//
 nav{
@@ -45,9 +75,85 @@ nav{
     }
 }
 
-//STYlE FOR LOGO//
+//STYLE FOR LOGO//
 #logo{
-  float: right;
-  margin-top: -60px;
-  margin-left: 10p;
-  }
+  grid-area: logo;
+  background-color: black;
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  top: 0;
+}
+
+//STYLE FOR IMAGES//
+.subgrid{
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-column-gap: 10px;
+  background-color: black;
+}
+
+
+article{
+  grid-area: article;
+  //padding: 10px;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  font-family:sans-serif;
+  text-align: center;
+  background-color: black;
+  float: left;
+    img{
+      // float: left;
+      width: 400px;
+      height: 400px;
+    }
+
+    img:hover{
+      transition-duration: 0.4s;
+      width:500px;
+    }
+
+    a{
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: white;
+    }
+
+    a:hover{
+      font-weight: bold;
+      font-size: 25px;
+      color: #217f6c;
+      text-decoration: underline;
+    }
+
+    div{
+      border-bottom: 2px solid #217f6c;
+      padding: 10px 0;
+    }
+}
+
+#camping{
+  grid-area: camping;
+  @include info;
+
+}
+
+#fishing{
+  grid-area: fishing;
+  @include info;
+
+}
+
+#hiking{
+  grid-area: hiking;
+  @include info;
+}
+
+#mountain_climbing{
+  grid-area: mountain_climbing;
+  @include info;
+
+}
