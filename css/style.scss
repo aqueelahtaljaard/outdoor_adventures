@@ -32,7 +32,7 @@
   }
 
   a:hover{
-    color: #217f6c;
+    color: #63c98f;
     font-weight: bold;
     text-decoration: underline;
   }
@@ -70,7 +70,7 @@ nav{
     }
 
     a:hover{
-      color: #217f6c;
+      color: #63c98f;
       text-decoration: underline;
     }
 }
@@ -92,23 +92,28 @@ nav{
   grid-column-gap: 10px;
   background-color: black;
 }
-
-
 article{
   grid-area: article;
-  //padding: 10px;
+  padding: 10px;
   margin: 0 auto;
   font-style: italic;
   font-size: 20px;
   color: white;
   font-family:sans-serif;
   text-align: center;
-  background-color: black;
-  float: left;
-    img{
-      // float: left;
-      width: 400px;
-      height: 400px;
+  background-color: #63c98f;
+    div{
+      display: inline;
+    }
+    p{
+      //float: left;
+      display: inline;
+
+    }
+    img {
+      float: left;
+      width: 300px;
+      height: 300px;
     }
 
     img:hover{
@@ -127,11 +132,6 @@ article{
       font-size: 25px;
       color: #217f6c;
       text-decoration: underline;
-    }
-
-    div{
-      border-bottom: 2px solid #217f6c;
-      padding: 10px 0;
     }
 }
 

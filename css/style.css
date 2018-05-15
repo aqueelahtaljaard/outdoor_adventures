@@ -25,7 +25,7 @@ nav {
     transition-duration: 0.4s;
     color: white; }
   nav a:hover {
-    color: #217f6c;
+    color: #63c98f;
     text-decoration: underline; }
 
 #logo {
@@ -44,17 +44,22 @@ nav {
 
 article {
   grid-area: article;
+  padding: 10px;
   margin: 0 auto;
   font-style: italic;
   font-size: 20px;
   color: white;
   font-family: sans-serif;
   text-align: center;
-  background-color: black;
-  float: left; }
+  background-color: #63c98f; }
+  article div {
+    display: inline; }
+  article p {
+    display: inline; }
   article img {
-    width: 400px;
-    height: 400px; }
+    float: left;
+    width: 300px;
+    height: 300px; }
   article img:hover {
     transition-duration: 0.4s;
     width: 500px; }
@@ -67,9 +72,6 @@ article {
     font-size: 25px;
     color: #217f6c;
     text-decoration: underline; }
-  article div {
-    border-bottom: 2px solid #217f6c;
-    padding: 10px 0; }
 
 #camping {
   grid-area: camping;
@@ -84,7 +86,7 @@ article {
     transition-duration: 0.4s;
     color: white; }
   #camping a:hover {
-    color: #217f6c;
+    color: #63c98f;
     font-weight: bold;
     text-decoration: underline; }
 
@@ -101,7 +103,7 @@ article {
     transition-duration: 0.4s;
     color: white; }
   #fishing a:hover {
-    color: #217f6c;
+    color: #63c98f;
     font-weight: bold;
     text-decoration: underline; }
 
@@ -118,7 +120,7 @@ article {
     transition-duration: 0.4s;
     color: white; }
   #hiking a:hover {
-    color: #217f6c;
+    color: #63c98f;
     font-weight: bold;
     text-decoration: underline; }
 
@@ -135,7 +137,7 @@ article {
     transition-duration: 0.4s;
     color: white; }
   #mountain_climbing a:hover {
-    color: #217f6c;
+    color: #63c98f;
     font-weight: bold;
     text-decoration: underline; }
 
