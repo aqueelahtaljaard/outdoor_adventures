@@ -5,12 +5,13 @@
   "logo logo logo logo"
   "nav nav nav nav"
   "article article article article"
+  "panel panel panel panel"
   "camping camping camping camping"
   "fishing fishing fishing fishing"
   "hiking hiking hiking hiking"
   "mountain_climbing mountain_climbing mountain_climbing mountain_climbing";
   grid-template-columns: auto auto auto auto;
-  grid-template-rows:  200px auto auto auto;
+  grid-template-rows:  200px auto auto 100px auto auto auto;
   background-color: #63c98f;
   font-size: 15px;
 }
@@ -20,7 +21,8 @@
   text-align: center;
   color: white;
   background-color: black;
-  padding: 20px;
+  width: 100%;
+  border: 2px solid #63c98f;
 
   li{
     text-decoration: none;
@@ -49,13 +51,10 @@
   top: 0;
 }
 
-
-
 // STYLE FOR NAV//
 nav{
   grid-area: nav;
   @include greenNav;
-
 
     li{
       text-decoration: none;
@@ -73,6 +72,24 @@ nav{
       color: #63c98f;
       text-decoration: underline;
     }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+      //  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      //  padding: 12px 16px;
+      //  z-index: 1;
+    }
+
+     .dropdown-content:hover {
+        display: block;
+    }
 }
 
 //STYLE FOR LOGO//
@@ -86,12 +103,7 @@ nav{
 }
 
 //STYLE FOR IMAGES//
-.subgrid{
-  display: grid;
-  grid-column: 1fr 1fr;
-  grid-column-gap: 10px;
-  background-color: black;
-}
+
 article{
   grid-area: article;
   padding: 10px;
@@ -101,16 +113,11 @@ article{
   color: white;
   font-family:sans-serif;
   text-align: center;
-  background-color: #63c98f;
-    div{
-      display: inline;
-    }
-    p{
-      //float: left;
-      display: inline;
+  background-color: black;
+  display: inline;
 
-    }
     img {
+      padding: 2px;
       float: left;
       width: 300px;
       height: 300px;
@@ -118,23 +125,40 @@ article{
 
     img:hover{
       transition-duration: 0.4s;
-      width:500px;
+      width:400px;
     }
 
-    a{
+}
+//style for img label//
+#panel{
+  display: grid;
+  grid-area: panel;
+  grid-template-columns: 300px 350px 280px 300px;
+  font-size: 20px;
+  text-align: center;
+  //margin: 0 auto;
+  padding-left:130px;
+  //padding-right: 100px;
+  background-color: black;
+  li{
     text-decoration: none;
-    transition-duration: 0.4s;
-    color: white;
-    }
+    display: inline;
+  //  margin: 60px ;
+  }
 
-    a:hover{
-      font-weight: bold;
-      font-size: 25px;
-      color: #217f6c;
-      text-decoration: underline;
-    }
+  a{
+  text-decoration: none;
+  transition-duration: 0.4s;
+  color: white;
+  }
+
+  a:hover{
+    //font-weight: bold;
+    color: #217f6c;
+    text-decoration: underline;}
 }
 
+//style for information//
 #camping{
   grid-area: camping;
   @include info;
