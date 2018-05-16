@@ -18,6 +18,40 @@
           <li><a href="contact.html">CONTACT US</a></li>
         </ul>
       </nav>
+      <form>
+        <p>
+          <em><strong>Please fill in your information below. Thank you!</em></strong>
+        </p>
+
+      <p>  <label>Name:</label>
+        <input type="name"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
+
+      <p>  <label>Surname:</label>
+        <input type="surname"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
+
+
+    <p><label>Email:</label>
+        <input type="email" name="user_email"pattern="" required title="required. Must be numeric only" placeholder="Required. Must be valid email" id="email"></p>
+
+
+        <p>
+        <label>Category:</label>
+        <select class="input" name="dropdown">
+          <option value="Category" select>(Please select a category)</option>
+          <option value="Category" select>camping</option>
+          <option value="Category" select>fishing</option>
+            <option value="Category" select>hiking</option>
+          <option value="Category" select>mountain climbing</option>
+        </select>
+      </p>
+
+  <p>  <label>Message:</label>
+      <br>
+      <textarea name="message" form="usrform">enter message here...</textarea></p>
+
+
+    <input type="submit" name="" value="Submit">
+  </form>
 
   </body>
 </html>
