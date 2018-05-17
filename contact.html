@@ -4,6 +4,37 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    #sidebar{
+
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    /* z-index: 1; */
+
+    background-color: black;
+    /* overflow-x: hidden; */
+    font-size: 18px;
+    padding: 10px;
+}
+ul li{
+    text-decoration: none;
+    padding: 20px;
+}
+
+ul li a{
+    transition-duration: 0.4s;
+    color: white;
+}
+
+ul li a:hover{
+    color: #63c98f;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+    </style>
+
   </head>
   <body>
     <div id="container">
@@ -16,22 +47,43 @@
           <li><a href="index.html">HOME</a></li>
           <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="contact.html">CONTACT US</a></li>
+
+          <li><a href="">CATEGORY</a>
+            <ul>
+              <li><a href="#camping">CAMPING</a></li>
+              <li><a href="#fishing">FISHING</a></li>
+              <li><a href="#hiking">HIKING</a></li>
+              <li><a href="#mountain_climbing">MOUNTAIN CLIMBING</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
+
+      <div id="sidebar">
+       <ul>
+         <li><a href="#camping">CAMPING</a></li>
+         <li><a href="#fishing">FISHING</a></li>
+         <li><a href="#hiking">HIKING</a></li>
+         <li><a href="#mountain_climbing">MOUNTAIN CLIMBING</a></li>
+       </ul>
+
+     </div>
+
+
       <form>
-        <p>
-          <em><strong>Please fill in your information below. Thank you!</em></strong>
-        </p>
+        <h1>
+          Please fill in your information below. Thank you!
+        </h1>
 
       <p>  <label>Name:</label>
-        <input type="name"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
+        <input  class="input" type="name"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
 
       <p>  <label>Surname:</label>
-        <input type="surname"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
+        <input  class="input"type="surname"  pattern=".{7,12}" required title="required and alphabets only" placeholder="required and alphabets only" id="username"></p>
 
 
     <p><label>Email:</label>
-        <input type="email" name="user_email"pattern="" required title="required. Must be numeric only" placeholder="Required. Must be valid email" id="email"></p>
+        <input  class="input"type="email" name="user_email"pattern="" required title="required. Must be numeric only" placeholder="Required. Must be valid email" id="email"></p>
 
 
         <p>
@@ -46,8 +98,7 @@
       </p>
 
   <p>  <label>Message:</label>
-      <br>
-      <textarea name="message" form="usrform">enter message here...</textarea></p>
+      <textarea class="input" name="message" form="usrform">enter message here...</textarea></p>
 
 
     <input type="submit" name="" value="Submit">

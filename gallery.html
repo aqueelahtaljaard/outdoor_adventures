@@ -4,6 +4,35 @@
     <meta charset="utf-8">
     <title>OUTDOOR ADVENTURES</title>
     <link rel="stylesheet" href="css/style.css">
+  <style>  #sidebar{
+
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    /* z-index: 1; */
+
+    background-color: black;
+    /* overflow-x: hidden; */
+    font-size: 18px;
+    padding: 10px;
+}
+ul li{
+    text-decoration: none;
+    padding: 20px;
+}
+
+ul li a{
+    transition-duration: 0.4s;
+    color: white;
+}
+
+ul li a:hover{
+    color: #63c98f;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+    </style>
   </head>
   <body>
     <div id="container">
@@ -16,17 +45,68 @@
           <li><a href="index.html">HOME</a></li>
           <li><a href="#">GALLERY</a></li>
           <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="">CATEGORY</a>
+            <ul>
+              <li><a href="#camping">CAMPING</a></li>
+              <li><a href="#fishing">FISHING</a></li>
+              <li><a href="#hiking">HIKING</a></li>
+              <li><a href="#mountain_climbing">MOUNTAIN CLIMBING</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
-
       <article>
-        <img src="images/camping.jpg" alt="camping">
-        <img src="images/camping.jpg" alt="camping">
-        <img src="images/camping.jpg" alt="camping">
-        <img src="images/camping.jpg" alt="camping">
-        
+        <h2>WHEN THE CHAOS OF CITY LIFE GETS TOO MUCH,  ESCAPE INTO THE WILD AND ENJOY OTDOOR ACTIVITIES</h2>
       </article>
-  </div>
+      <div id="panel"></div>
+
+       <div id="sidebar">
+        <ul>
+          <li><a href="#camping">CAMPING</a></li>
+          <li><a href="#fishing">FISHING</a></li>
+          <li><a href="#hiking">HIKING</a></li>
+          <li><a href="#mountain_climbing">MOUNTAIN CLIMBING</a></li>
+        </ul>
+
+      </div>
+
+
+
+      <div id="camping">
+        <h3>CAMPING</h3>
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+      </div>
+
+
+      <div id="fishing">
+        <h3>FISHING</h3>
+
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+      </div>
+
+      <div id="hiking">
+        <h3>HIKING</h3>
+
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+      </div>
+
+      <div id="mountain_climbing">
+        <h3>MOUNTAIN CLIMBING</h3>
+
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping.jpg" alt="camping">
+      </div>
 
   </body>
 </html>
