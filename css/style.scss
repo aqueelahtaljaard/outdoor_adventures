@@ -6,23 +6,34 @@
   "nav nav nav nav"
   "article article article article"
   "panel panel panel panel"
-  "camping camping camping camping"
-  "fishing fishing fishing fishing"
-  "hiking hiking hiking hiking"
-  "mountain_climbing mountain_climbing mountain_climbing mountain_climbing";
+  "sidebar camping camping camping"
+  "sidebar fishing fishing fishing"
+  "sidebar hiking hiking hiking"
+  "sidebar mountain_climbing mountain_climbing mountain_climbing";
   grid-template-columns: auto auto auto auto;
   grid-template-rows:  200px auto auto 50px auto auto auto;
   background-color: #63c98f;
   font-size: 15px;
+  font-family:"high tower text";
 }
 
 @mixin info{
   font-family:sans-serif;
-  text-align: center;
+  // text-align: center;
   color: white;
   background-color: black;
   width: 100%;
-  border: 2px solid #63c98f;
+  border: 0.5px solid #63c98f;
+  line-height: 25px;
+
+  h1, h2, h3{
+    text-align: center;
+  }
+
+  p{
+    margin-left:18%;
+    margin-right: 18%;
+  }
 
   li{
     text-decoration: none;
@@ -128,7 +139,8 @@ article{
     border: 2px solid #63c98f;
   }
     img {
-      padding: 2px;
+      display: grid;
+      // padding: 2px;
       float: left;
       width: 300px;
       height: 300px;
@@ -142,18 +154,21 @@ article{
 }
 //style for img label//
 #panel{
+  padding-left: 10%;
+  padding-right: 5%;
   display: grid;
   grid-area: panel;
-  grid-template-columns: 300px 350px 280px 300px;
+  grid-template-columns: auto auto auto auto;
   font-size: 20px;
   text-align: center;
-  //margin: 0 auto;
-  padding-left:200px;
+  // margin: 0 auto;
+  // padding-left:200px;
   //padding-right: 100px;
   background-color: black;
   li{
     text-decoration: none;
     display: inline;
+    margin: auto;
   //  margin: 60px ;
   }
 
@@ -169,19 +184,48 @@ article{
     text-decoration: underline;}
 }
 
+//style for sidebar//
+#sidebar{
+  grid-area: sidebar;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  padding:0px;
+}
+
+ul li{
+  text-decoration: none;
+  padding: 30px 0 ;
+}
+
+ul li ul{
+  padding: 10px 0;
+}
+
+ul li a{
+  transition-duration: 0.4s;
+  color: white;
+}
+
+ul li a:hover{
+  color: #63c98f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 //style for information//
 #camping{
   grid-area: camping;
   @include info;
   img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px;
   }
 
   img:hover{
     transition-duration: 0.4s;
-    width:400px;
+    width:200px;
   }
 
 }
@@ -191,13 +235,13 @@ article{
   @include info;
   img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px;
   }
 
   img:hover{
     transition-duration: 0.4s;
-    width:400px;
+    width:200px;
   }
 
 }
@@ -207,13 +251,13 @@ article{
   @include info;
   img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px;
   }
 
   img:hover{
     transition-duration: 0.4s;
-    width:400px;
+    width:200px;
   }
 }
 
@@ -222,13 +266,13 @@ article{
   @include info;
   img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px;
   }
 
   img:hover{
     transition-duration: 0.4s;
-    width:400px;
+    width:200px;
   }
 
 }
@@ -272,27 +316,45 @@ form{
   }
 }
 
-//MOBILE 960//
+ //MOBILE 960//
 @media screen and (min-width: 960px){
   #container{
     width:100%;
   }
-}
-
-//MOBILE 640//
+  #panel{
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+ }
+   //MOBILE 640//
 @media screen and (min-width:640px){
-  #container{
-    width: 100%;
+   #container{
+         width: 100%;
   }
 
   .article > img{
-    width: 100%;
+  width: 100%;
   }
-}
+  #panel{
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+ }
 
 // MOBILE 320//
-@media screen and (min-width:320px){
+@media only screen and (max-width:320px){
   #container{
     width: 100%;
   }
+
+  article{
+    text-align: center;
+  }
+
+  article > img{
+   width: 40%;
+   // float: left;
+ }
+
+
 }

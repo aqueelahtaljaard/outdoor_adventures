@@ -1,10 +1,11 @@
 #container {
   display: grid;
-  grid-template-areas: "logo logo logo logo" "nav nav nav nav" "article article article article" "panel panel panel panel" "camping camping camping camping" "fishing fishing fishing fishing" "hiking hiking hiking hiking" "mountain_climbing mountain_climbing mountain_climbing mountain_climbing";
+  grid-template-areas: "logo logo logo logo" "nav nav nav nav" "article article article article" "panel panel panel panel" "sidebar camping camping camping" "sidebar fishing fishing fishing" "sidebar hiking hiking hiking" "sidebar mountain_climbing mountain_climbing mountain_climbing";
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 200px auto auto 50px auto auto auto;
   background-color: #63c98f;
-  font-size: 15px; }
+  font-size: 15px;
+  font-family: "high tower text"; }
 
 nav {
   display: grid;
@@ -67,7 +68,7 @@ article {
     font-family: serif;
     border: 2px solid #63c98f; }
   article img {
-    padding: 2px;
+    display: grid;
     float: left;
     width: 300px;
     height: 300px; }
@@ -76,16 +77,18 @@ article {
     width: 400px; }
 
 #panel {
+  padding-left: 10%;
+  padding-right: 5%;
   display: grid;
   grid-area: panel;
-  grid-template-columns: 300px 350px 280px 300px;
+  grid-template-columns: auto auto auto auto;
   font-size: 20px;
   text-align: center;
-  padding-left: 200px;
   background-color: black; }
   #panel li {
     text-decoration: none;
-    display: inline; }
+    display: inline;
+    margin: auto; }
   #panel a {
     text-decoration: none;
     transition-duration: 0.4s;
@@ -94,14 +97,42 @@ article {
     color: #63c98f;
     text-decoration: underline; }
 
+#sidebar {
+  grid-area: sidebar;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  padding: 0px; }
+
+ul li {
+  text-decoration: none;
+  padding: 30px 0; }
+
+ul li ul {
+  padding: 10px 0; }
+
+ul li a {
+  transition-duration: 0.4s;
+  color: white; }
+
+ul li a:hover {
+  color: #63c98f;
+  font-weight: bold;
+  text-decoration: underline; }
+
 #camping {
   grid-area: camping;
   font-family: sans-serif;
-  text-align: center;
   color: white;
   background-color: black;
   width: 100%;
-  border: 2px solid #63c98f; }
+  border: 0.5px solid #63c98f;
+  line-height: 25px; }
+  #camping h1, #camping h2, #camping h3 {
+    text-align: center; }
+  #camping p {
+    margin-left: 18%;
+    margin-right: 18%; }
   #camping li {
     text-decoration: none; }
   #camping a {
@@ -113,20 +144,25 @@ article {
     text-decoration: underline; }
   #camping img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px; }
   #camping img:hover {
     transition-duration: 0.4s;
-    width: 400px; }
+    width: 200px; }
 
 #fishing {
   grid-area: fishing;
   font-family: sans-serif;
-  text-align: center;
   color: white;
   background-color: black;
   width: 100%;
-  border: 2px solid #63c98f; }
+  border: 0.5px solid #63c98f;
+  line-height: 25px; }
+  #fishing h1, #fishing h2, #fishing h3 {
+    text-align: center; }
+  #fishing p {
+    margin-left: 18%;
+    margin-right: 18%; }
   #fishing li {
     text-decoration: none; }
   #fishing a {
@@ -138,20 +174,25 @@ article {
     text-decoration: underline; }
   #fishing img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px; }
   #fishing img:hover {
     transition-duration: 0.4s;
-    width: 400px; }
+    width: 200px; }
 
 #hiking {
   grid-area: hiking;
   font-family: sans-serif;
-  text-align: center;
   color: white;
   background-color: black;
   width: 100%;
-  border: 2px solid #63c98f; }
+  border: 0.5px solid #63c98f;
+  line-height: 25px; }
+  #hiking h1, #hiking h2, #hiking h3 {
+    text-align: center; }
+  #hiking p {
+    margin-left: 18%;
+    margin-right: 18%; }
   #hiking li {
     text-decoration: none; }
   #hiking a {
@@ -163,20 +204,25 @@ article {
     text-decoration: underline; }
   #hiking img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px; }
   #hiking img:hover {
     transition-duration: 0.4s;
-    width: 400px; }
+    width: 200px; }
 
 #mountain_climbing {
   grid-area: mountain_climbing;
   font-family: sans-serif;
-  text-align: center;
   color: white;
   background-color: black;
   width: 100%;
-  border: 2px solid #63c98f; }
+  border: 0.5px solid #63c98f;
+  line-height: 25px; }
+  #mountain_climbing h1, #mountain_climbing h2, #mountain_climbing h3 {
+    text-align: center; }
+  #mountain_climbing p {
+    margin-left: 18%;
+    margin-right: 18%; }
   #mountain_climbing li {
     text-decoration: none; }
   #mountain_climbing a {
@@ -188,11 +234,11 @@ article {
     text-decoration: underline; }
   #mountain_climbing img {
     padding: 10;
-    width: 300px;
+    width: 280px;
     height: 300px; }
   #mountain_climbing img:hover {
     transition-duration: 0.4s;
-    width: 400px; }
+    width: 200px; }
 
 form {
   display: grid;
@@ -227,15 +273,29 @@ form {
 
 @media screen and (min-width: 960px) {
   #container {
-    width: 100%; } }
+    width: 100%; }
+
+  #panel {
+    padding-left: 10%;
+    padding-right: 5%; } }
 @media screen and (min-width: 640px) {
   #container {
     width: 100%; }
 
   .article > img {
-    width: 100%; } }
-@media screen and (min-width: 320px) {
+    width: 100%; }
+
+  #panel {
+    padding-left: 10%;
+    padding-right: 5%; } }
+@media only screen and (max-width: 320px) {
   #container {
-    width: 100%; } }
+    width: 100%; }
+
+  article {
+    text-align: center; }
+
+  article > img {
+    width: 40%; } }
 
 /*# sourceMappingURL=style.css.map */
