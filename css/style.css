@@ -1,11 +1,15 @@
 #container {
   display: grid;
-  grid-template-areas: "logo logo logo logo" "nav nav nav nav" "article article article article" "panel panel panel panel" "sidebar camping camping camping" "sidebar fishing fishing fishing" "sidebar hiking hiking hiking" "sidebar mountain_climbing mountain_climbing mountain_climbing";
+  grid-template-areas: "logo logo logo logo" "nav nav nav nav" "img1 img2 img3 img4" "article article article article" "sidebar camping camping camping" "sidebar fishing fishing fishing" "sidebar hiking hiking hiking" "sidebar mountain_climbing mountain_climbing mountain_climbing" "footer footer footer footer";
   grid-template-columns: auto auto auto auto;
-  grid-template-rows: 200px auto auto 50px auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
   background-color: #63c98f;
+  background-size: cover;
   font-size: 15px;
-  font-family: "high tower text"; }
+  font-family: "high tower text";
+  left: 0;
+  margin: 0;
+  padding: 0; }
 
 nav {
   display: grid;
@@ -18,7 +22,7 @@ nav {
   width: 100%;
   text-align: center;
   top: 0;
-  border: 1px solid #63c98f; }
+  border: 0.1px solid #63c98f; }
   nav li {
     text-decoration: none;
     display: inline;
@@ -50,6 +54,38 @@ nav {
   text-align: center;
   top: 0; }
 
+#img1 {
+  grid-area: img1;
+  background-image: url("../images/camping.jpg"); }
+
+#img2 {
+  grid-area: img2;
+  background-image: url("../images/fishing.jpg"); }
+
+#img3 {
+  grid-area: img3;
+  background-image: url("../images/hiking.jpg"); }
+
+#img4 {
+  grid-area: img4;
+  background-image: url("../images/mountain_climbing.jpg"); }
+
+#img1, #img2, #img3, #img4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 412px;
+  height: 350px;
+  padding-left: 5px;
+  text-align: center;
+  font-size: 10px; }
+  #img1 a, #img2 a, #img3 a, #img4 a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: black; }
+  #img1 a:hover, #img2 a:hover, #img3 a:hover, #img4 a:hover {
+    color: #63c98f;
+    text-decoration: underline; }
+
 article {
   grid-area: article;
   margin: 0 auto;
@@ -59,7 +95,8 @@ article {
   font-family: sans-serif;
   text-align: center;
   background-color: black;
-  display: inline; }
+  display: inline;
+  padding: 0 480px 0 480px; }
   article h2 {
     color: #63c98f;
     font-style: italic;
@@ -76,169 +113,67 @@ article {
     transition-duration: 0.4s;
     width: 400px; }
 
-#panel {
-  padding-left: 10%;
-  padding-right: 5%;
-  display: grid;
-  grid-area: panel;
-  grid-template-columns: auto auto auto auto;
-  font-size: 20px;
-  text-align: center;
-  background-color: black; }
-  #panel li {
-    text-decoration: none;
-    display: inline;
-    margin: auto; }
-  #panel a {
-    text-decoration: none;
-    transition-duration: 0.4s;
-    color: white; }
-  #panel a:hover {
-    color: #63c98f;
-    text-decoration: underline; }
-
 #sidebar {
   grid-area: sidebar;
   background-color: black;
   font-size: 18px;
   color: white;
-  padding: 0px; }
+  padding: 0px;
+  text-decoration: none; }
+  #sidebar ul li {
+    text-decoration: none;
+    text-decoration: none; }
+  #sidebar ul li a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: white;
+    padding: 0; }
+  #sidebar ul li a:hover {
+    color: #63c98f;
+    font-weight: bold;
+    text-decoration: underline; }
 
-ul li {
-  text-decoration: none;
-  padding: 30px 0; }
-
-ul li ul {
-  padding: 10px 0; }
-
-ul li a {
-  transition-duration: 0.4s;
-  color: white; }
-
-ul li a:hover {
-  color: #63c98f;
-  font-weight: bold;
-  text-decoration: underline; }
+#camping, #fishing, #hiking, #mountain_climbing {
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+  width: 100%;
+  border: 0.5px solid #63c98f;
+  line-height: 30px; }
+  #camping h1, #camping h2, #camping h3, #fishing h1, #fishing h2, #fishing h3, #hiking h1, #hiking h2, #hiking h3, #mountain_climbing h1, #mountain_climbing h2, #mountain_climbing h3 {
+    text-align: center; }
+  #camping li, #fishing li, #hiking li, #mountain_climbing li {
+    text-decoration: none; }
+  #camping a, #fishing a, #hiking a, #mountain_climbing a {
+    transition-duration: 0.4s;
+    color: white; }
+  #camping a:hover, #fishing a:hover, #hiking a:hover, #mountain_climbing a:hover {
+    color: #63c98f;
+    font-weight: bold;
+    text-decoration: underline; }
+  #camping h1, #fishing h1, #hiking h1, #mountain_climbing h1 {
+    background-color: #63c98f;
+    color: black; }
+  #camping img, #fishing img, #hiking img, #mountain_climbing img {
+    padding: 10;
+    width: 280px;
+    height: 300px; }
+  #camping img:hover, #fishing img:hover, #hiking img:hover, #mountain_climbing img:hover {
+    transition-duration: 0.4s;
+    opacity: 0.5; }
 
 #camping {
-  grid-area: camping;
-  font-family: sans-serif;
-  color: white;
-  background-color: black;
-  width: 100%;
-  border: 0.5px solid #63c98f;
-  line-height: 25px; }
-  #camping h1, #camping h2, #camping h3 {
-    text-align: center; }
-  #camping p {
-    margin-left: 18%;
-    margin-right: 18%; }
-  #camping li {
-    text-decoration: none; }
-  #camping a {
-    transition-duration: 0.4s;
-    color: white; }
-  #camping a:hover {
-    color: #63c98f;
-    font-weight: bold;
-    text-decoration: underline; }
-  #camping img {
-    padding: 10;
-    width: 280px;
-    height: 300px; }
-  #camping img:hover {
-    transition-duration: 0.4s;
-    width: 200px; }
+  grid-area: camping; }
 
 #fishing {
-  grid-area: fishing;
-  font-family: sans-serif;
-  color: white;
-  background-color: black;
-  width: 100%;
-  border: 0.5px solid #63c98f;
-  line-height: 25px; }
-  #fishing h1, #fishing h2, #fishing h3 {
-    text-align: center; }
-  #fishing p {
-    margin-left: 18%;
-    margin-right: 18%; }
-  #fishing li {
-    text-decoration: none; }
-  #fishing a {
-    transition-duration: 0.4s;
-    color: white; }
-  #fishing a:hover {
-    color: #63c98f;
-    font-weight: bold;
-    text-decoration: underline; }
-  #fishing img {
-    padding: 10;
-    width: 280px;
-    height: 300px; }
-  #fishing img:hover {
-    transition-duration: 0.4s;
-    width: 200px; }
+  grid-area: fishing; }
 
 #hiking {
-  grid-area: hiking;
-  font-family: sans-serif;
-  color: white;
-  background-color: black;
-  width: 100%;
-  border: 0.5px solid #63c98f;
-  line-height: 25px; }
-  #hiking h1, #hiking h2, #hiking h3 {
-    text-align: center; }
-  #hiking p {
-    margin-left: 18%;
-    margin-right: 18%; }
-  #hiking li {
-    text-decoration: none; }
-  #hiking a {
-    transition-duration: 0.4s;
-    color: white; }
-  #hiking a:hover {
-    color: #63c98f;
-    font-weight: bold;
-    text-decoration: underline; }
-  #hiking img {
-    padding: 10;
-    width: 280px;
-    height: 300px; }
-  #hiking img:hover {
-    transition-duration: 0.4s;
-    width: 200px; }
+  grid-area: hiking; }
 
 #mountain_climbing {
-  grid-area: mountain_climbing;
-  font-family: sans-serif;
-  color: white;
-  background-color: black;
-  width: 100%;
-  border: 0.5px solid #63c98f;
-  line-height: 25px; }
-  #mountain_climbing h1, #mountain_climbing h2, #mountain_climbing h3 {
-    text-align: center; }
-  #mountain_climbing p {
-    margin-left: 18%;
-    margin-right: 18%; }
-  #mountain_climbing li {
-    text-decoration: none; }
-  #mountain_climbing a {
-    transition-duration: 0.4s;
-    color: white; }
-  #mountain_climbing a:hover {
-    color: #63c98f;
-    font-weight: bold;
-    text-decoration: underline; }
-  #mountain_climbing img {
-    padding: 10;
-    width: 280px;
-    height: 300px; }
-  #mountain_climbing img:hover {
-    transition-duration: 0.4s;
-    width: 200px; }
+  grid-area: mountain_climbing; }
 
 form {
   display: grid;
@@ -271,31 +206,82 @@ form {
     width: 100px;
     margin: auto; }
 
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: black; }
+  footer a {
+    display: inline-block; }
+
 @media screen and (min-width: 960px) {
   #container {
-    width: 100%; }
-
-  #panel {
-    padding-left: 10%;
-    padding-right: 5%; } }
+    width: 100%; } }
 @media screen and (min-width: 640px) {
   #container {
     width: 100%; }
 
-  .article > img {
-    width: 100%; }
+  #img1 {
+    grid-area: img1; }
+    #img1 img {
+      width: 100%; }
 
-  #panel {
-    padding-left: 10%;
-    padding-right: 5%; } }
+  #img2 {
+    grid-area: img2; }
+    #img2 img {
+      width: 100%; }
+
+  #img3 {
+    grid-area: img3; }
+    #img3 img {
+      width: 100%; }
+
+  #img4 {
+    grid-area: img4; }
+    #img4 img {
+      width: 100%; } }
 @media only screen and (max-width: 320px) {
   #container {
+    font-size: 12px; }
+
+  nav {
+    font-size: 15px; }
+    nav li {
+      margin-left: 0;
+      margin-right: 3%; }
+
+  form {
     width: 100%; }
 
   article {
-    text-align: center; }
+    text-align: center;
+    font-size: 10px;
+    padding: 0; }
+    article h2 {
+      line-height: 20px;
+      padding: 5px; }
 
-  article > img {
-    width: 40%; } }
+  #img1, #img2, #img3, #img4 {
+    width: 100px;
+    height: 100px;
+    background-size: cover; }
+    #img1 h1, #img2 h1, #img3 h1, #img4 h1 {
+      font-size: 15px; }
+
+  #sidebar {
+    display: none; }
+
+  #camping, #fishing, #hiking, #mountain_climbing {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: justify; }
+    #camping img, #fishing img, #hiking img, #mountain_climbing img {
+      padding-left: 8px;
+      padding-right: 8px;
+      width: 130px;
+      height: 130px; }
+    #camping h1, #fishing h1, #hiking h1, #mountain_climbing h1 {
+      font-size: 16px; }
+    #camping h3, #fishing h3, #hiking h3, #mountain_climbing h3 {
+      font-size: 12px; } }
 
 /*# sourceMappingURL=style.css.map */
