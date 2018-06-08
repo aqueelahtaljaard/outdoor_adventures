@@ -216,16 +216,17 @@ footer {
   grid-area: footer;
   text-align: center;
   background-color: black; }
-  footer a {
-    text-decoration: none;
-    transition-duration: 0.4s;
-    color: white;
-    padding: 0;
-    display: inline-block; }
-  footer a:hover {
-    color: #4CB87F;
-    font-weight: bold;
-    text-decoration: underline; }
+    footer  a {
+      display: inline-block;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      color: white;
+      padding: 0; }
+    footer  a:hover {
+      color: #4CB87F;
+      font-weight: bold;
+      text-decoration: underline; }
+     }
 
 @media screen and (min-width: 960px) {
   #container {
@@ -299,7 +300,23 @@ footer {
       font-size: 12px; } }
 @media only screen and (max-width: 320px) {
   #container {
-    font-size: 10px; }
+    font-size: 10px;
+    grid-template-areas:
+    "logo logo"
+    "nav nav"
+    "article article"
+    "img1 img2"
+    "img3 img4"
+    "camping camping"
+    "fishing fishing"
+    "hiking hiking"
+    "mountain_climbing mountain_climbing"
+    "sidebar sidebar"
+    "footer footer";
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+   }
 
   nav {
     font-size: 15px; }
@@ -318,8 +335,8 @@ footer {
     padding: 0;
     height: 120%; }
     form .input {
-      width: 200px;
-      height: 25px; }
+      width: 100px;
+      height: 10px; }
     form h1 {
       font-size: 15px; }
 
@@ -360,6 +377,7 @@ footer {
       font-size: 14px; }
 
   footer {
-    margin-top: 30%; } }
+    margin-top: 4%; }
+    }
 
 /*# sourceMappingURL=style.css.map */

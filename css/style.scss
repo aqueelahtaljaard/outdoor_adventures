@@ -6,17 +6,18 @@
   "nav nav nav nav"
   "img1 img2 img3 img4"
   "article article article article"
+  "sidebar form form form"
   "sidebar camping camping camping"
   "sidebar fishing fishing fishing"
   "sidebar hiking hiking hiking"
   "sidebar mountain_climbing mountain_climbing mountain_climbing"
   "footer footer footer footer";
   grid-template-columns: auto auto auto auto;
-  grid-template-rows:  auto auto auto auto auto auto auto auto;
-  background-color: #63c98f;
+  grid-template-rows:  auto auto auto auto auto auto auto auto auto;
+  background-color:black;
   background-size: cover;
   font-size: 15px;
-  font-family:"high tower text";
+  font-family:sans-serif;
   left: 0;
   margin: 0;
   padding: 0;
@@ -28,11 +29,13 @@
   font-size: 20px;
   background-color: black;
   width: 100%;
-  border: 0.5px solid #63c98f;
+  border: 0.5px solid #4CB87F;
   line-height: 30px;
 
   h1, h2, h3{
     text-align: center;
+    font-family:"high tower text";
+
   }
 
   li{
@@ -45,7 +48,7 @@
   }
 
   a:hover{
-    color: #63c98f;
+    color: #50af2d;
     font-weight: bold;
     text-decoration: underline;
   }
@@ -60,7 +63,7 @@
   width: 100%;
   text-align: center;
   top: 0;
-  border: 0.1px solid #63c98f;
+  border: 0.1px solid #4CB87F;
 }
 
 // STYLE FOR NAV//
@@ -82,7 +85,7 @@ nav{
     }
 
     a:hover{
-      color: #63c98f;
+      color:#4CB87F;
       text-decoration: underline;
     }
 
@@ -110,11 +113,19 @@ nav{
 //STYLE FOR LOGO//
 #logo{
   grid-area: logo;
+  background-image: url("../images/logo-bg.jpeg");
+  background-size: cover;
+  height: 500px;
   background-color: black;
   margin:0 auto;
   width: 100%;
   text-align: center;
   top: 0;
+    img{
+      padding: 0;
+      width: 300px;
+      height: 250px;
+    }
 }
 
 //STYLE FOR IMAGES//
@@ -156,29 +167,34 @@ nav{
     }
 
     a:hover{
-      color: #63c98f;
+      color: #4CB87F;
       text-decoration: underline;
     }
 }
 article{
   grid-area: article;
+  background-image: url("../images/article-bckgnd2.jpg");
+  background-size:cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  width: 1400px;
+  height: 300px;
   // padding: 10px;
   margin: 0 auto;
-  font-style: italic;
-  font-size: 20px;
-  color: white;
-  font-family:sans-serif;
-  text-align: center;
-  background-color: black;
-  display: inline;
-  padding:0 480px 0 480px;
+  // font-style: italic;
+  // font-size: 20px;
+  // color: white;
+  // font-family:sans-serif;
+  // text-align: center;
+  // display: inline;
+  padding:0 20px 0 10px;
   h2{
-    color: #63c98f;
+    color: #4CB87F;
     font-style: italic;
     letter-spacing: 1px;
     line-height: 40px;
     font-family:serif;
-    border: 2px solid #63c98f;
+    border: 2px solid #4CB87F;
   }
     img {
       display: grid;
@@ -221,7 +237,7 @@ article{
   }
 
   ul li a:hover{
-    color: #63c98f;
+    color:#4CB87F;
     font-weight: bold;
     text-decoration: underline;
   }
@@ -234,7 +250,7 @@ article{
   @include info;
 
   h1{
-    background-color: #63c98f;
+    background-color: #4CB87F;
     color: black;
   }
   img {
@@ -266,14 +282,15 @@ article{
 
 //STYLE FOR FORM//
 form{
+  grid-area:form;
   display: grid;
-  grid-column: span 4;
+  // grid-column: span 4;
   margin: 0 auto;
-  padding: 30px 0px;
+  // padding: 50px 0px;
   background-color: black;
   color: white;
-  height: 100%;
-  width: 60%;
+  height: 145%;
+  width: 100%;
   background-image: url("../images/backgrd.jpeg");
   background-repeat: repeat-x;
   background-size: cover;
@@ -282,7 +299,7 @@ form{
   font-family: arial;
 
     ::placeholder{
-      color: #63c98f;
+      color: #4CB87Fs;
     }
    label{
      display: inline-block;
@@ -308,9 +325,21 @@ footer{
   grid-area:footer;
   text-align: center;
   background-color: black;
-    a{
-      display: inline-block;
-    }
+   a{
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: white;
+    padding: 0;
+    display: inline-block;
+
+  }
+
+  a:hover{
+    color:#4CB87F;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
 }
 
  //MOBILE 960//
@@ -351,35 +380,121 @@ footer{
   width: 100%;
 }
 }
+// #sidebar{
+//   display: none;
+// }
 
 
 
  }
+ //MOBILE 425
+ @media only screen and (max-width:425px){
+   #container{
+     font-size: 12px;
+
+   }
+
+   nav{
+     font-size: 15px;
+
+     li{
+       margin-left: 0;
+       margin-right: 3%;
+     }
+   }
+
+   form{
+     width: 100%;
+   }
+
+   article{
+     text-align: center;
+     font-size: 10px;
+     padding: 0;
+     h2{
+       line-height: 20px;
+       padding: 5px;
+     }
+
+   }
+
+   #img1, #img2, #img3, #img4{
+     width:100px;
+     height:100px;
+     background-size:cover;
+       h1{
+         font-size: 15px;
+       }
+   }
+
+
+   #sidebar{
+     display: none;
+   }
+   #camping,#fishing, #hiking, #mountain_climbing{
+     // width: 100%;
+     grid-column-start: 1;
+     grid-column-end: 5;
+     text-align:justify;
+       img{
+         padding-left:8px;
+         padding-right:8px;
+
+         width: 130px;
+         height: 130px;
+       }
+
+       h1{
+         font-size:16px;
+       }
+       h3{
+         font-size: 12px;
+       }
+   }
+
+
+ }
+
 
 // MOBILE 320//
 @media only screen and (max-width:320px){
   #container{
-    font-size: 12px;
+    font-size: 10px;
 
   }
 
   nav{
     font-size: 15px;
-
     li{
       margin-left: 0;
       margin-right: 3%;
     }
   }
+  #logo{
+    height: 250px;
+    img {
+      width: 80px;
+      height: 80px; }
+  }
 
   form{
     width: 100%;
+    padding: 0;
+    height: 120%;
+    .input{
+      width: 200px;
+      height: 25px;
+    }
+
+    h1{
+      font-size: 15px;
+    }
   }
 
   article{
     text-align: center;
     font-size: 10px;
-    padding: 0;
+    padding: 0 15px 0 20px;
     h2{
       line-height: 20px;
       padding: 5px;
@@ -388,23 +503,28 @@ footer{
   }
 
   #img1, #img2, #img3, #img4{
-    width:100px;
+    width:150px;
     height:100px;
     background-size:cover;
       h1{
         font-size: 15px;
       }
   }
-
-
-  #sidebar{
-    display: none;
+  #img2{
+    float: left;
   }
+  #img4{
+    float: left;
+  }
+
+
+
   #camping,#fishing, #hiking, #mountain_climbing{
     // width: 100%;
     grid-column-start: 1;
     grid-column-end: 5;
     text-align:justify;
+    font-size: 12px;
       img{
         padding-left:8px;
         padding-right:8px;
@@ -417,8 +537,12 @@ footer{
         font-size:16px;
       }
       h3{
-        font-size: 12px;
+        font-size: 14px;
       }
+  }
+
+  footer{
+        margin-top: 30%;
   }
 
 
